@@ -596,7 +596,6 @@ a:hover {
     border-radius: 9px;
     background: #5355C6;
     border: 1px solid #5355C6;
-
 }
 .users-item {
     display: flex;
@@ -668,8 +667,6 @@ a:hover {
     width: 24px;
     height: 24px;
 }
-
-
 
 /* SUPPORT */
 .sidebar-support {
