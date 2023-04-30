@@ -120,6 +120,7 @@ a:hover {
 /* end general */
 
 
+
 /* --- header --- */
 .header {
     margin: 40px 0 81px 0;
@@ -133,6 +134,14 @@ a:hover {
     letter-spacing: 0.02em;
     color: #4A4A4A;
     padding-bottom: 32px;
+}
+/* BURGER */
+/* сброс стилей */
+.burger {
+    display: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
 }
 
 /* --- COURSES --- */
@@ -314,7 +323,7 @@ a:hover {
     position: fixed;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
     background: #F5F5F5;
     border-radius: 12px;
     z-index: 99;
@@ -403,10 +412,10 @@ a:hover {
     width: 18px;
 }
 .icon-study {
-    background: url(./assets/svg/menu-lightning.svg) no-repeat center;
+    background: url(./assets/svg/menu-lightning_choose.svg) no-repeat center;
 }
 .icon-marathon {
-    background: url(./assets/svg/menu-box_choose.svg) no-repeat center;
+    background: url(./assets/svg/menu-box.svg) no-repeat center;
 }
 .icon-buy {
     background: url(./assets/svg/menu-buy.svg) no-repeat center;
@@ -423,7 +432,7 @@ a:hover {
     border-radius: 12px;
     padding: 10px 14px 10px 8px;
     margin-bottom: 32px;
-    grid-gap: 9px;
+    grid-gap: 10px;
 }
 .menu-img {
     padding-top: 8px;
@@ -668,6 +677,7 @@ a:hover {
     height: 24px;
 }
 
+
 /* SUPPORT */
 .sidebar-support {
     position: relative;
@@ -733,3 +743,333 @@ a:hover {
     color: rgba(255, 255, 255, 0.52);
 }
 /* --- end sidebar --- */
+@media screen and (max-width: 1440px) {
+    .container {
+        max-width: calc(100% - 116px);
+    }
+}
+@media screen and (max-height: 515px) {
+    .menu {
+        min-height: 700px;
+    }
+}
+@media screen and (max-width: 1023px) {
+
+    .menu-content {
+        overflow-y: inherit;
+    }
+    .profession-block_content {
+        grid-gap: 20px;
+    }
+    .profession-ellipse {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+    }
+    .clients {
+        left: -19px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 100%;
+    }
+    .menu-logo {
+        justify-content: flex-start;
+        margin-bottom: 20px;
+    }
+    .menu-footer_box {
+        align-items: flex-start;
+    }
+    .flex-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .container {
+        /* margin: 0 15px; */
+        margin: 0;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .burger {
+        padding: 0;
+        position: relative;
+        width: 42px;
+        max-height: 34px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 8px;
+        cursor: pointer;
+        z-index: 11;
+    }
+    .burger-line {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 3px;
+        background-color: #5355C6;
+        transition: all 0.3s ease 0s;
+    }
+    .burger-line_span {
+        transform: scale(1);
+    }
+    .burger.active .burger-line_span {
+        transform: scale(0);
+    }
+    .burger.active .burger-line_top {
+        top: 10px;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .burger.active .burger-line_bottom {
+        bottom: 15px;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+    .menu:hover .menu-item {
+        justify-content: center;
+    }
+    .menu.active {
+        width: 100%;
+        display: flex;
+        right: 0;
+        transition: all 0.5s ease 0s;
+        z-index: 10;
+    }
+    .menu.active .showable {
+        display: block;
+    }
+    .menu.active .menu-content {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .menu.active .menu-search {
+        max-width: 500px;
+        margin: 0 auto 28px auto;
+    }
+    .menu.active .menu-item_text {
+        font-size: 25px;
+        display: flex;
+        gap: 5px;
+        font-size: 18px;
+    }
+    .menu.active .menu-subscription {
+        max-width: 500px;
+        margin: 0 auto 55px auto;
+    }
+    .menu.menu.active .menu-text {
+        margin: 0 auto;
+        max-width: 300px;
+    }
+    .menu.active .menu-img {
+        display: none;
+    }
+    .menu.active .menu-title {
+        font-size: 16px;
+    }
+    .menu.active .menu-subtitle {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    .menu.active .join {
+        font-size: 16px;
+    }
+    .manu.menu.active .menu-footer_box {
+        margin-bottom: 55px;
+    }
+    .menu.active .menu-user {
+        gap: 28px;
+    }
+    .menu.active .menu-wrap {
+        display: flex;
+    }
+    .menu-body {
+        padding: 0;
+        align-items: flex-start;
+    }
+    .menu.active .menu-exit img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .link {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 20px;
+    }
+    .column-left {
+        width: 100%;
+    }
+    .menu {
+        display: none;
+    }
+    .menu-content {
+        max-height: none;
+        justify-content: flex-start;
+    }
+    .courses-block {
+        flex-direction: column;
+        max-height: inherit;
+        grid-gap: 16px;
+    }
+    .title {
+        font-size: 34px;
+    }
+    .courses-card {
+        width: 100%;
+        display: flex;
+        padding: 35px 50px;
+    }
+    .courses-card_box {
+        flex: 1;
+        height: auto;
+    }
+    .courses-text {
+        font-size: 44px;
+        line-height: 66px;
+    }
+    .profession .title {
+        padding: 45px 0 45px 0;
+    }
+    .profession-block .flex {
+        flex-direction: column;
+    }
+    .profession-block-text {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 7px;
+    }
+    .border_white {
+        max-height: inherit;
+    }
+    .clients {
+        top: 0;
+        left: 0;
+        max-height: 84px;
+    }
+}
+@media screen and (max-width: 424px) {
+    .container {
+        align-items: center;
+    }
+    .burger {
+        padding: 0;
+        position: relative;
+        max-height: 30px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 9px;
+        cursor: pointer;
+        top: 5px;
+        left: 5px;
+    }
+    .burger-line {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 2px;
+        background-color: #5355C6;
+        transition: all 0.3s ease 0s;
+        /* border: 2px solid #F1CDB3; */
+    }
+    .burger-line_span {
+        transform: scale(1);
+    }
+    .burger.active .burger-line_span {
+        transform: scale(0);
+    }
+    .burger.active .burger-line_top {
+        top: 9px;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    .burger.active .burger-line_bottom {
+        bottom: 15px;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
+    .lock {
+        overflow: hidden;
+    }
+    .menu .flex {
+        justify-content: flex-start;
+    }
+    .courses-text {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .border {
+        padding: 25px 30px;
+    }
+    .profession-ellipse {
+        display: none;
+    }
+
+    .border {
+        text-align: center;
+    }
+    .border_white {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .clients {
+        display: none;
+    }
+    .text-title_white {
+        margin-bottom: 20px;
+    }
+
+    .user-name {
+        margin-bottom: 16px;
+    }
+    .users-title {
+        font-size: 18px;
+    }
+    .users-place,
+    .users-point {
+        font-size: 15px;
+    }
+
+    .sidebar-support_title {
+        font-size: 17px;
+    }
+    .chat-text {
+        font-size: 18px;
+    }
+    .support-click {
+        font-size: 15px;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .title {
+        text-align: center;
+    }
+    .courses-card {
+        padding: 35px 30px;
+    }
+    .border,
+    .border_white {
+        padding: 25px 15px;
+    }
+    .text-subtitle {
+        font-size: 18px;
+    }
+    .bold-text {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .link {
+        font-size: 19px;
+    }
+    .profession-block-text {
+        grid-gap: 12px;
+    }
+    .text-subtitle {
+        font-size: 21px;
+        line-height: 27px;
+    }
+}
