@@ -778,9 +778,7 @@ a:hover {
         justify-content: flex-start;
         margin-bottom: 20px;
     }
-    .menu-footer_box {
-        align-items: flex-start;
-    }
+
     .flex-container {
         flex-direction: column;
         width: 100%;
@@ -853,6 +851,7 @@ a:hover {
         display: flex;
         gap: 5px;
         font-size: 18px;
+        width: 122px;
     }
     .menu.active .menu-subscription {
         max-width: 500px;
@@ -875,7 +874,10 @@ a:hover {
     .menu.active .join {
         font-size: 16px;
     }
-    .manu.menu.active .menu-footer_box {
+    .menu-footer_box {
+        justify-content: center;
+    }
+    .menu.active .menu-footer_box {
         margin-bottom: 55px;
     }
     .menu.active .menu-user {
@@ -886,7 +888,7 @@ a:hover {
     }
     .menu-body {
         padding: 0;
-        align-items: flex-start;
+        /* align-items: flex-start; */
     }
     .menu.active .menu-exit img {
         width: 25px;
@@ -952,6 +954,12 @@ a:hover {
 @media screen and (max-width: 424px) {
     .container {
         align-items: center;
+    }
+    .menu-body {
+        align-items: flex-start;
+    }
+    .menu-footer_box {
+        align-items: flex-start;
     }
     .burger {
         padding: 0;
