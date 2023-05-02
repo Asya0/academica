@@ -748,6 +748,55 @@ a:hover {
         max-width: calc(100% - 116px);
     }
 }
+@media screen and (min-width: 768px) and (max-width: 1152px) {
+    body {
+        padding-right: 20px;
+    }
+    .flex-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .column-right {
+        max-width: unset;
+    }
+    .column-right, .sidebar {
+        width: 100%;
+    }
+    .sidebar {
+        display: flex;
+        grid-gap: 30px;
+        align-items: flex-start;
+    }
+    .profession-block .border {
+        grid-gap: 20px;
+    }
+    .border {
+        padding: 15px 20px;
+        padding-right: 20px;
+    }
+    .profession-block .link {
+        white-space: nowrap;
+    }
+    .container {
+        margin: 0 95px;
+        max-width: calc(100% - 95px);
+    }
+    .menu-content {
+        padding: 63px 15px 0 15px;
+    }
+    .border_white {
+        padding-right: 20px;
+    }
+    .text-title {
+        font-size: 22px;
+    }
+    .clients {
+        max-width: 140px;
+        bottom: 0;
+        top: 12px;
+    }
+}
 @media screen and (max-height: 515px) {
     .menu {
         min-height: 700px;
