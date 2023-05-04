@@ -999,9 +999,15 @@ a:hover {
         padding: 45px 0 45px 0;
     }
     .profession-block_content {
-        grid-gap: 28px;    }
+        grid-gap: 28px;
+    }
     .profession-block .flex {
         flex-direction: column;
+        grid-gap: 20px;
+    }
+    .profession-block .link {
+        width: 100%;
+        text-align: center;
     }
     .profession-block-text {
         display: flex;
@@ -1051,7 +1057,7 @@ a:hover {
         position: relative;
         display: inline-block;
         width: 30px;
-        height: 2px;
+        height: 3px;
         background-color: #5355C6;
         transition: all 0.3s ease 0s;
     }
@@ -1062,11 +1068,11 @@ a:hover {
         transform: scale(0);
     }
     .burger.active .burger-line_top {
-        top: 9px;
+        top:0px;
         transform: rotate(-45deg) translate(0px, -50%);
     }
     .burger.active .burger-line_bottom {
-        bottom: 15px;
+        bottom: 26px;
         transform: rotate(45deg) translate(0px, 50%);
     }
     .lock {
